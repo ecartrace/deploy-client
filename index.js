@@ -1,6 +1,6 @@
 
 var reservations = null;
-const BASE_URL = "https://random-eats.herokuapp.com/"
+const BASE_URL = "https://arcane-lake-37790.herokuapp.com/"
 
 var createReservation = function (first_name, last_name, phone, email, day, time) {
     var data = "first_name=" + encodeURIComponent(first_name);
