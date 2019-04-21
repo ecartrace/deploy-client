@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box;
+}
+html { 
+    margin:0px;
+    height:100%;
+    background: url("restaurant.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  input {
+      text-align: center;
+      font-size:18px;
+      width:245px;
+      height:45px;
+      margin-bottom:5px;
+  }
+
+  select {
+    text-align: center;
+    width:245px;
+    height:45px;
+    margin-bottom:5px;
+}
+
+  body {
+      height:100%;
+      margin:0px;
+  }
+
+  h1 {
+      margin:0px;
+      font-family: 'Josefin Sans', sans-serif;
+      color:white;
+      text-align:center;
+      text-shadow: 1px 1px #000000;
+  }
+
+  h3 {
+      color:#ffffff;
+  }
+
+  li {
+      color:white;
+      list-style-type:none;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 2em;
+      font-weight:bolder;
+      text-align:center;
+      text-shadow: 1px 1px #000000;
+      padding:0px;
+  }
+
+  .customerDiv {
+      margin:0px auto;
+      color:#ffffff;
+  }
+
+  .customer-info {
+      margin-bottom:15px;
+      border-bottom: 1px solid #ffffff;
+      color:#ffffff;
+  }
+
+#customers {
+      width:50%;
+      margin:0px auto;
+      padding:0px;
+      clear:both;
+      color:#ffffff;
+  }
+
+  #logo {
+      width:480px;
+      height:54px;
+      margin: 50px auto;
+  }
+
+/*NEW RESERVATION CONTAINER*/
+#new-customer {
+      width:50%;
+      margin:0 auto;
+}
+
+#customer-container {
+    width:100%;
+    display:flex;
+    align-items: center;
+    margin: 0px auto;
+
+}
+
+#customer-form {
+    margin:0px auto;
+}
+
+#customer-button-container {
+    width:245px;
+    height:45px;
+    margin:50px auto 25px auto;
+}
+
+#customer-button {
+    width:245px;
+    height:45px;
+    background:transparent;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-align:center;
+}
+
+#customer-button:hover {
+    background-color:#ffffff;
+    color:black;
+}
+
+#reservation-list {
+    width:50%;
+    margin:0px auto;
+}
+
+#res-button-container {
+    width:245px;
+    height:45px;
+    margin:0px auto 50px auto;
+}
+
+#reservation {
+    width:245px;
+    height:45px;
+    background:transparent;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-align:center;
+}
+
+#reservation:hover {
+    background-color:#ffffff;
+    color:black;
+}
+/*END NEW RESERVATION CONTAINER*/
+
+#view-reservation-container {
+    margin:0px auto;
+}
+
+/*#make-reservation-container {
+    float:left;
+}*/
+
+/*EDIT RESERVATION CONTAINER*/
+#edit-reservation-container {
+    margin:0px auto;
+}
+
+#update-customer {
+    width:50%;
+    margin:0 auto;
+}
+
+#update-customer-container {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+#update-customer-form {
+    margin: 0px auto;
+}
+
+#update-customer-button-container {
+    width:245px;
+    height:45px;
+    margin:50px auto 25px auto;
+}
+
+#update-customer-button {
+    width:245px;
+    height:45px;
+    background:transparent;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-align:center;
+}
+
+#update-customer-button:hover {
+    background-color:#ffffff;
+    color:black;
+}
+/*END EDIT RESERVATION CONTAINER*/
+
+/*MEMBER CONTAINER*/
+#member-container {
+    width:100%;
+    margin: 0px auto;
+
+}
+
+#member {
+    width:50%;
+    margin:0 auto;
+}
+
+#member-form-container {
+    width:100%;
+    display:flex;
+    align-items: center;
+    margin: 0px auto;
+}
+
+#member-form {
+    margin:0px auto;
+}
+
+#member-button-container {
+    width:245px;
+    height:45px;
+    margin:0px auto;
+}
+
+#member-button {
+    width:245px;
+    height:45px;
+    background:transparent;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-align:center;
+}
+
+#member-button:hover {
+    background-color:#ffffff;
+    color:black;
+}
+
+#register-message {
+    margin:0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:500px;
+    height:45px;
+    color:red;
+    font-family:sans-serif;
+    font-size:16px;
+    font-weight:bolder;
+    letter-spacing:2.5px;
+}
+/*END MEMBER CONTAINER*/
+
+/*ALREADY REGISTERED CONTAINER*/
+
+#not-registered-container {
+    width:50%;
+    margin:0 auto;
+}
+
+#not-registered-button-container {
+    width:245px;
+    height:45px;
+    margin:0px auto 50px auto;
+}
+
+#not-registered-button {
+    width:245px;
+    height:45px;
+    background:transparent;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-align:center;
+}
+
+#not-registered-button:hover {
+    background-color:#ffffff;
+    color:black;
+}
+/*END NOT REGISTERED CONTAINER*/
+
+/*ALREADY REGISTERED CONTAINER*/
+
+#already-registered-container {
+    width:50%;
+    margin:0 auto;
+}
+
+#already-registered-button-container {
+    width:245px;
+    height:45px;
+    margin:0px auto 50px auto;
+}
+
+#already-registered-button {
+    width:245px;
+    height:45px;
+    background:transparent;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-align:center;
+}
+
+#already-registered-button:hover {
+    background-color:#ffffff;
+    color:black;
+}
+/*END ALREADY REGISTERED CONTAINER*/
+
+/*GO TO RESERVATION CONTAINER*/
+
+#go-to-reservations-container {
+    width:50%;
+    margin:0 auto;
+}
+
+#go-to-reservations-button-container {
+    width:245px;
+    height:45px;
+    margin:0px auto 50px auto;
+}
+
+#go-to-reservations-button {
+    width:245px;
+    height:45px;
+    background:transparent;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-align:center;
+}
+
+#go-to-reservations-button:hover {
+    background-color:#ffffff;
+    color:black;
+}
+/*END GO TO RESERVATION CONTAINER*/
+
+
+/*MEMBER VERIFICATION CONTAINER*/
+#member-verification-container{
+    display:flex;
+    align-content: center;
+    flex-direction:column;
+    margin:0px auto;
+}
+
+#verification {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:50%;
+    margin:0 auto;
+}
+
+#member-verification-form{ 
+    margin:0px auto;
+}
+
+#member-verification-button-container {
+    margin:0px auto;
+}
+
+#member-verification-button {
+    width:245px;
+    height:45px;
+    background:transparent;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-align:center;
+}
+
+#member-verification-button:hover {
+    background-color:#ffffff;
+    color:black;
+}
+
+#verification-message {
+    margin:0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:500px;
+    height:45px;
+    color:red;
+    font-family:sans-serif;
+    font-size:16px;
+    font-weight:bolder;
+    letter-spacing:2.5px;
+}
+/*END MEMBER VERIFICATION CONTAINER*/
+
+#wrapper {
+      width:100%;
+      height:100%;
+      margin:0px;
+}
+
+/*BUTTONS*/
+.delete-button{
+    margin-left: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+.update-button{
+    margin-left: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+#update-button-container {
+    width:245px;
+    height:45px;
+    margin:50px auto 0px auto;
+}
+
+
+#update-button {
+    width:245px;
+    height:45px;
+    background:transparent;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2.5px;
+    text-align:center;
+}
+
+#update-button:hover {
+    background-color:#ffffff;
+    color:black;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Eats</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,700i" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="logo" style="margin-bottom:50px;">
+                <img src="logo.png", alt="random eats" style="width:480px; height:54px">
+            </div>
+
+            <div id="go-to-reservations-container">
+                <div id="go-to-reservations-button-container">
+                    <button id="go-to-reservations-button">MAKE RESERVATION!</button>
+                </div>
+            </div>
+
+            <div id="already-registered-container">
+                <div id="already-registered-button-container">
+                    <button id="already-registered-button">ALREADY REGISTERED?</button>
+                </div>
+            </div>
+
+            <div id="not-registered-container">
+                <div id="not-registered-button-container">
+                    <button id="not-registered-button">SIGN UP</button>
+                </div>
+            </div>
+
+            <div id="new-reservation-container" style="display:none;">
+                    <div id="make-reservation">
+                        <h1 style="margin-bottom:50px">MAKE RESERVATION</h1>
+                    </div>
+                    <div id="new-customer">
+                        <div id="customer-container">
+                            <form id="customer-form">
+                                <input type="text" name="first_name" autocomplete="off" id="first_name" placeholder="FIRST NAME"><br>
+                                <input type="text" name="last_name" autocomplete="off" id="last_name" placeholder="LAST NAME"><br>
+                                <input type="text" name="phone" autocomplete="off" id="phone" placeholder="PHONE"><br>
+                                <input type="text" name="email" autocomplete="off" id="email" placeholder="EMAIL"><br>
+                                <select name="day" id="day">
+                                    <option value="" disabled selected>DAY</option>
+                                    <option value="sunday">Sunday</option>
+                                    <option value="monday">Monday</option>
+                                    <option value="tuesday">Tuesday</option>
+                                    <option value="wednesday">Wednesday</option>
+                                    <option value="thursday">Thursday</option>
+                                    <option value="friday">Friday</option>
+                                    <option value="saturday">Saturday</option>
+                                </select><br>
+                                <select name="time" id="time">
+                                    <option value="" disabled selected>TIME</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="1:00">1:00</option>
+                                    <option value="2:00">2:00</option>
+                                    <option value="3:00">3:00</option>
+                                    <option value="4:00">4:00</option>
+                                    <option value="5:00">5:00</option>
+                                    <option value="6:00">6:00</option>
+                                    <option value="7:00">7:00</option>
+                                    <option value="8:00">8:00</option>
+                                    <option value="9:00">9:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div id="customer-button-container">
+                                <button id="customer-button">SUBMIT RESERVATION</button>
+                        </div>
+                    </div>
+            </div>
+            <div id="view-reservation-container" style="display:none;">
+                <div id="reservations-list">
+                    <div id="res-button-container">
+                        <button id="reservation">VIEW RESERVATIONS</button>
+                        <!--<button id="reservation" onclick="getReservationList()">VIEW RESERVATIONS</button>-->
+                    </div>
+                </div>
+                <ul id="customers"></ul>
+            </div>
+            <div id="edit-reservation-container" style="display: none">
+                <div id="update-customer">
+                    <div id="update-customer-container">
+                        <div id="edit-reservation">
+                                <h1>EDIT RESERVATION</h1>
+                        </div>
+                        <form id="update-customer-form">
+                            <input type="hidden" autocomplete="off" id="update_id"><br>
+                            <input type="text" autocomplete="off" id="update_first_name"><br>
+                            <input type="text" autocomplete="off" id="update_last_name"><br>
+                            <input type="text" autocomplete="off" id="update_phone"><br>
+                            <input type="text" autocomplete="off" id="update_email"><br>
+                            <select name="update_day" id="update_day">
+                                    <option value="" disabled selected>DAY</option>
+                                    <option value="Sunday">Sunday</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                            </select><br>
+                            <select name="update_time" id="update_time">
+                                <option value="" disabled selected>TIME</option>
+                                <option value="12:00">12:00</option>
+                                <option value="1:00">1:00</option>
+                                <option value="2:00">2:00</option>
+                                <option value="3:00">3:00</option>
+                                <option value="4:00">4:00</option>
+                                <option value="5:00">5:00</option>
+                                <option value="6:00">6:00</option>
+                                <option value="7:00">7:00</option>
+                                <option value="8:00">8:00</option>
+                                <option value="9:00">9:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div id="update-customer-button-container">
+                        <button id="update-customer-button">SUBMIT CHANGES</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="member-container" style="display:none;">
+                <div id="member">
+                    <div id="member-form-container">
+                        <form id="member-form">
+                            <input type="text" name="fname" autocomplete="off" id="fname" placeholder="FIRST NAME"><br>
+                            <input type="text" name="lname" autocomplete="off" id="lname" placeholder="LAST NAME"><br>
+                            <input type="text" name="email_address" autocomplete="off" id="email_address" placeholder="EMAIL"><br>
+                            <input type="text" name="password" autocomplete="off" id="password" placeholder="PASSWORD"><br>
+                        </form>
+                    </div>
+                    <div id="member-button-container">
+                        <button id="member-button">REGISTER</button>
+                    </div>
+                    <div id="register-message"></div>
+                </div>
+            </div>
+
+            <div id="member-verification-container" style="display:none;">
+                <div id="verification">
+                    <form id="member-verification-form">
+                        <!--<input type="hidden" autocomplete="off" id="member-id"><br>-->
+                        <input type="text" autocomplete="off" id="member-email" placeholder="EMAIL"><br>
+                        <input type="text" autocomplete="off" id="member-password" placeholder="PASSWORD"><br>
+                    </form>
+                    <div id="member-verification-button-container">
+                        <button id="member-verification-button">SIGN IN</button>
+                    </div>
+                    <div id="verification-message"></div>
+                </div>
+            </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
