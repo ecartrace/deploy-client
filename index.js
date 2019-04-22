@@ -22,7 +22,7 @@ var createReservation = function (first_name, last_name, phone, email, day, time
     }).then(function (response) {
         if (response.status == 401) {
             document.getElementById("new-reservation-container").style.display = "none";
-            document.getElementById("view-reservation-container").style.display = "none";
+            document.getElementById("view-reservation-container").style.display = "block";
             document.getElementById("member-verification-container").style.display = "block";
             var message = document.querySelector("#verification-message");
             message.innerHTML = "NOT LOGGED IN";
