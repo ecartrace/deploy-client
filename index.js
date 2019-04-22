@@ -205,6 +205,7 @@ var createSession = function (email_address, password) {
             document.getElementById("member-verification-container").style.display = "none";
             document.getElementById("new-reservation-container").style.display = "block";
             document.getElementById("view-reservation-container").style.display = "block";
+            clearMemberVerificationForm();
         } else if (response.status == 422) {
             console.log("authentication failed.");
             //document.getElementById("member-verification-container").style.display = "none";
@@ -213,6 +214,7 @@ var createSession = function (email_address, password) {
             document.getElementById("go-to-reservations-container").style.display = "none";
             var message = document.querySelector("#verification-message");
             message.innerHTML = "INCORRECT PASSWORD. PLEASE TRY AGAIN";
+            clearMemberVerificationForm();
         } else {
             console.log("authentication failed.");
             document.getElementById("member-verification-container").style.display = "none";
@@ -221,6 +223,7 @@ var createSession = function (email_address, password) {
             document.getElementById("go-to-reservations-container").style.display = "none";
             var message = document.querySelector("#register-message");
             message.innerHTML = "NOT REGISTERED. PLEASE SIGN UP";
+            clearMemberVerificationForm();
         }
     });
 };
@@ -387,4 +390,8 @@ function clearUpdateForm() {
 
 function clearMemberForm() {
     var frm = document.getElementById("member-form").reset()
-}
+};
+
+function clearMemberVerificationForm() {
+    var frm = document.getElementById("member-verification-form").reset()
+};
