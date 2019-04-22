@@ -12,7 +12,7 @@ var createReservation = function (first_name, last_name, phone, email, day, time
     console.log('data: ', data);
     
     
-    fetch(BASE_URL + "reservations", {
+    fetch(`${BASE_URL}reservations`, {
         method: 'POST',
         body: data,
         credentials: 'include',
@@ -49,7 +49,7 @@ theButton.onclick = function () {
 };
 
 var deleteCustomer = function (id) {
-    fetch(BASE_URL + "reservations/${id}", {
+    fetch(`${BASE_URL}reservations/${id}`, {
       method: "DELETE",
       credentials: 'include'
     }).then(function (response) {
@@ -75,7 +75,7 @@ var updateCustomer = function (id, first_name, last_name, phone, email, day, tim
     data += "&time=" + encodeURIComponent(time);
     console.log('updatedata: ', data);
 
-    fetch(BASE_URL + "reservations/${id}", {
+    fetch(`${BASE_URL}reservations/${id}`, {
         method: "PUT",
         body: data,
         credentials: 'include',
@@ -98,7 +98,7 @@ var updateCustomer = function (id, first_name, last_name, phone, email, day, tim
 
 var retrieveCustomer = function(id) {
 
-    fetch(BASE_URL + "reservations/${id}", {
+    fetch(`${BASE_URL}reservations/${id}`, {
         method: "GET",
         credentials: "include"
     }).then(function(response) {
@@ -142,7 +142,7 @@ var createMember = function (fname, lname, email_address, password) {
     console.log('data: ', data);
     
     
-    fetch(BASE_URL + "members", {
+    fetch(`${BASE_URL}members`, {
         method: 'POST',
         body: data,
         credentials: 'include',
@@ -187,7 +187,7 @@ var createSession = function (email_address, password) {
     console.log('data: ', data);
     
     
-    fetch(BASE_URL + "sessions", {
+    fetch(`${BASE_URL}sessions`, {
         method: 'POST',
         body: data,
         credentials: 'include',
@@ -235,7 +235,7 @@ verificationButton.onclick = function () {
 
 var retrieveMember = function(id) {
 
-    fetch(BASE_URL + "members/${id}", {
+    fetch(`${BASE_URL}members/${id}`, {
         method: "GET",
         credentials: 'include'
     }).then(function(response) {
@@ -255,7 +255,7 @@ var retrieveMember = function(id) {
 };
 
 var getCustomers = function() {
-    fetch(BASE_URL + "reservations", {
+    fetch(`${BASE_URL}reservations`, {
         credentials: 'include'
     }).then(function (response) {
         if (response.status == 401) {
