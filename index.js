@@ -178,6 +178,7 @@ memberButton.onclick = function () {
     var password = document.getElementById("password").value;
 
     createMember(fname, lname, email, password);
+    clearMemberVerificationForm();
 
     document.getElementById("member-container").style.display = "none";
     document.getElementById("member-verification-container").style.display = "block";
