@@ -1,6 +1,6 @@
 
 var reservations = null;
-const BASE_URL = "https://arcane-lake-37790.herokuapp.com/"
+const BASE_URL = "https://pure-brushlands-19781.herokuapp.com/"
 
 var createReservation = function (first_name, last_name, phone, email, day, time) {
     var data = "first_name=" + encodeURIComponent(first_name);
@@ -142,7 +142,7 @@ var createMember = function (fname, lname, email_address, password) {
     console.log('data: ', data);
     
     
-    fetch(BASE_URL + "/members", {
+    fetch(BASE_URL + "members", {
         method: 'POST',
         body: data,
         credentials: 'include',
@@ -187,7 +187,7 @@ var createSession = function (email_address, password) {
     console.log('data: ', data);
     
     
-    fetch(BASE_URL + "/sessions", {
+    fetch(BASE_URL + "sessions", {
         method: 'POST',
         body: data,
         credentials: 'include',
@@ -235,7 +235,7 @@ verificationButton.onclick = function () {
 
 var retrieveMember = function(id) {
 
-    fetch(BASE_URL + "/members/${id}", {
+    fetch(BASE_URL + "members/${id}", {
         method: "GET",
         credentials: 'include'
     }).then(function(response) {
@@ -255,7 +255,7 @@ var retrieveMember = function(id) {
 };
 
 var getCustomers = function() {
-    fetch(BASE_URL + "/reservations", {
+    fetch(BASE_URL + "reservations", {
         credentials: 'include'
     }).then(function (response) {
         if (response.status == 401) {
