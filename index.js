@@ -26,6 +26,7 @@ var createReservation = function (first_name, last_name, phone, email, day, time
             document.getElementById("member-verification-container").style.display = "block";
             var message = document.querySelector("#verification-message");
             message.innerHTML = "NOT LOGGED IN";
+            clearForm();
             return;
         }
         console.log("reservation saved");
@@ -88,6 +89,7 @@ var updateCustomer = function (id, first_name, last_name, phone, email, day, tim
             document.getElementById("member-verification-container").style.display = "block";
             var message = document.querySelector("#verification-message");
             message.innerHTML = "NOT LOGGED IN";
+            clearUpdateForm();
             return;
         }
         console.log("Customer updated:", data);
@@ -156,6 +158,7 @@ var createMember = function (fname, lname, email_address, password) {
             document.getElementById("member-verification-container").style.display = "block";
             var message = document.querySelector("#verification-message");
             message.innerHTML = "ALREADY REGISTERED. PLEASE SIGN IN";
+            clearMemberForm();
             return;
         }
         console.log("member saved");
@@ -267,9 +270,6 @@ var getCustomers = function() {
         }
 
         response.json().then(function (data) {
-            // hide reg/auth forms
-            // show the vvvv
-
 
             customers = data;
             console.log('getCustomers: ', customers);
